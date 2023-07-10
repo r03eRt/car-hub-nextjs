@@ -27,13 +27,29 @@ const Footer = () => {
                         <div key={link.title} className='footer__link'>
                             <h3 className='font-bold'>{link.title}</h3>
                             {link.links.map(item => (
-                                <Link key={item.title} href={item.url} className='text-gray-500'>
+                                <Link 
+                                key={item.title} 
+                                href={item.url}
+                                className='text-gray-500'>
                                     {item.title}
                                 </Link>
                             ))}
                         </div>
                     ))
                 }
+            </div>
+
+            <div className='flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 py-10'>
+                <p>@2024 Carhub. All</p>
+                <div className="footer__copyrights-link">
+                    <Link href='/' className='text-gray-500'>
+                        Privacy policy
+                    </Link>
+                    <Link href='/' className='text-gray-500'>
+                        Terms of Use
+                    </Link>
+                </div>
+
             </div>
         </div>
       
